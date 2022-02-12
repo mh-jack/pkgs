@@ -1,0 +1,106 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    name: E2E
+    timeout-minutes: 10
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.6
+        id: go
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          cache-dependency-path: yarn.lock
+          node-version: 16
+
+      - name: Build
+        run: yarn turbo run build
+
+  build-win:
+    name: build and test
+    timeout-minutes: 10
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.6
+        id: wingo
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          cache-dependency-path: yarn.lock
+          node-version: 16
+
+      - name: Build
+        run: cd cli && go build ./cmd/turbo/...
+
+  examples:
+    name: run examples
+    timeout-minutes: 15
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Install Sponge
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" == "Linux" ]; then
+            sudo apt-get install -y moreutils
+          else
+            brew install moreutils
+          fi
+
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.6
+        id: go
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          cache-dependency-path: yarn.lock
+          node-version: 16
+
+      - run: npm i -g yarn
+
+      - name: Run build
+        run: yarn build
