@@ -5,8 +5,8 @@
   "source": "src/index.ts",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "PARCEL_WORKERS=0 parcel watch --no-hmr",
-    "build": "PARCEL_WORKERS=0 parcel build --no-cache",
+    "dev": "cross-env PARCEL_WORKERS=0 parcel watch --no-hmr",
+    "build": "cross-env PARCEL_WORKERS=0 parcel build --no-cache",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "alias": {
@@ -18,11 +18,12 @@
     "@stitches/react": "^1.2.6"
   },
   "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "cross-env": "^5.0.1",
     "parcel": "2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
     "typescript": "^4.4.4"
   }
 }
