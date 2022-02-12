@@ -1,4 +1,4 @@
-name: Build
+name: Build 14
 on: [push]
 jobs:
   build:
@@ -16,5 +16,5 @@ jobs:
       - name: Install Packages
         run: yarn install
 
-      - name: Build & Unit Test
+      - name: Build
         run: yarn build
