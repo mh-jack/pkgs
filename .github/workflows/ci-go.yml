@@ -31,7 +31,7 @@ jobs:
           node-version: 16
 
       - name: Build
-        run: yarn turbo run build
+        run: yarn build
 
   build-win:
     name: build and test
@@ -61,7 +61,7 @@ jobs:
           node-version: 16
 
       - name: Build
-        run: cd cli && go build ./cmd/turbo/...
+        run: yarn build
 
   examples:
     name: run examples
