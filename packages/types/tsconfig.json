@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
   "compilerOptions": {
     "composite": false,
     "declaration": true,
@@ -7,17 +9,16 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "lib": ["dom", "es2020"],
-    "module": "commonjs",
-    "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "outDir": "./dist",
     "preserveWatchOutput": true,
-    "rootDir": "./src",
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "strict": true,
-    "target": "es2020"
+    "lib": ["ES2015", "DOM"],
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
   "include": ["src"],
   "exclude": ["node_modules"]

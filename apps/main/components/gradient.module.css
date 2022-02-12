@@ -1,0 +1,147 @@
+.gradientBackground {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: scroll;
+  user-select: none;
+  pointer-events: none;
+}
+.gradientOne {
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 100%;
+  max-width: calc(40vw + 25%);
+  height: 100%;
+  max-height: calc(40vh + 25%);
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    #f8af5a 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  transform: translate(-25%, -25%) scale(2);
+  opacity: 1;
+}
+.gradientTwo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: calc(40vw + 25%);
+  height: 100%;
+  max-height: calc(40vh + 25%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #de8fcd 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  transform: translate(50%, 50%) scale(1.5);
+  opacity: 1;
+}
+.gradientsHomeContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  overflow: hidden;
+  transition: opacity 0.4s ease-out;
+  pointer-events: none;
+}
+.gradientsHomeOne {
+  position: absolute;
+  top: -20%;
+  left: -35%;
+  z-index: 999;
+  width: 100%;
+  max-width: calc(40vw + 25%);
+  height: 100%;
+  max-height: calc(40vh + 25%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #de8fcd 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+.gradientsHomeTwo {
+  position: absolute;
+  top: -32%;
+  left: 40%;
+  z-index: 999;
+  width: 100%;
+  max-width: calc(40vw + 25%);
+  height: 100%;
+  max-height: calc(40vh + 25%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f8af5a 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+.gradientsHomeThree {
+  position: absolute;
+  top: 50vh;
+  left: 40%;
+  z-index: -1;
+  width: 100%;
+  max-width: calc(30vw + 25%);
+  height: 100%;
+  max-height: calc(30vh + 25%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #efe7a3 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+.gradientsHomeFour {
+  position: absolute;
+  right: 15%;
+  bottom: -25%;
+  z-index: -1;
+  width: 100%;
+  max-width: calc(30vw + 25%);
+  height: 100%;
+  max-height: calc(30vh + 25%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #8fded9 0%,
+    rgba(143, 222, 217, 0) 100%
+  );
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+.gradientsHomeFive {
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  z-index: -1;
+  width: 100%;
+  max-width: calc(30vw + 25%);
+  height: 100%;
+  max-height: calc(30vh + 25%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #de8fcd 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}

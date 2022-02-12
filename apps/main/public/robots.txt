@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+# this file should be just in prod env 
+User-agent : *
+Allow : /
+Sitemap: https://www.momenthouse.com/sitemap.xml
