@@ -30,6 +30,9 @@ jobs:
           cache-dependency-path: yarn.lock
           node-version: 16
 
+      - name: Install Packages
+        run: yarn install
+
       - name: Build
         run: yarn build
 
@@ -59,6 +62,9 @@ jobs:
           cache: yarn
           cache-dependency-path: yarn.lock
           node-version: 16
+
+      - name: Install Packages
+        run: yarn install
 
       - name: Build
         run: yarn build
@@ -100,7 +106,8 @@ jobs:
           cache-dependency-path: yarn.lock
           node-version: 16
 
-      - run: npm i -g yarn
+      - name: Install Packages
+        run: yarn install
 
-      - name: Run build
+      - name: Build
         run: yarn build
