@@ -1,13 +1,13 @@
 {
-  "name": "@mh-jack/ui",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "@mh-jack/auth",
   "source": "src/index.ts",
   "main": "dist/index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "cross-env PARCEL_WORKERS=0 parcel watch --no-hmr",
     "build": "cross-env PARCEL_WORKERS=0 parcel build --no-cache",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rimraf .turbo && rimraf node_modules && rimraf dist",
+    "dev": "cross-env PARCEL_WORKERS=0 parcel watch --no-hmr"
   },
   "alias": {
     "process": {
@@ -17,13 +17,16 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "@stitches/react": "^1.2.6"
+    "jwt-decode": "^3.1.2"
   },
   "devDependencies": {
+    "@mh-jack/types": "*",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "cross-env": "^5.0.1",
     "parcel": "2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typescript": "^4.4.4"
   }
 }

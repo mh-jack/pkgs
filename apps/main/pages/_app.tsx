@@ -1,6 +1,6 @@
 // Global styles
 import { globalStyles } from "@mh-jack/ui";
-
+import { UserProvider } from "@mh-jack/auth";
 import type { AppProps } from "next/app";
 
 export default function App({ Component }: AppProps) {
