@@ -5,8 +5,8 @@
   "source": "src/index.ts",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "cross-env PARCEL_WORKERS=0 parcel watch --no-hmr",
-    "build": "cross-env PARCEL_WORKERS=0 parcel build --no-cache",
+    "dev": "parcel watch --no-hmr",
+    "build": "parcel build --no-cache",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "alias": {
